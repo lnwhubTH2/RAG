@@ -98,7 +98,7 @@ vectorstore = FAISSStore(texts)
 
 def ask_question(question):
     # ค้นหาข้อมูลที่เกี่ยวข้อง
-    relevant_docs = vectorstore.similarity_search(question, k=100)
+    relevant_docs = vectorstore.similarity_search(question, k=15)
     context = " ".join(relevant_docs)
 
     # ถ้าไม่มีข้อมูลที่เกี่ยวข้อง
